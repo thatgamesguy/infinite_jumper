@@ -1,0 +1,45 @@
+\hypertarget{namespace_infinite_jumper}{}\section{Infinite\+Jumper Namespace Reference}
+\label{namespace_infinite_jumper}\index{Infinite\+Jumper@{Infinite\+Jumper}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_infinite_jumper_1_1_darkness}{Darkness}
+\begin{DoxyCompactList}\small\item\em Handles the translation of the gameobject that chases the player from the bottom of the screen. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_data_persistence}{Data\+Persistence}
+\begin{DoxyCompactList}\small\item\em Data persistence. Handles saving and loading of high score. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_fade_in}{Fade\+In}
+\begin{DoxyCompactList}\small\item\em Simple fade in script for Canvas\+Renderer. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_follow_target}{Follow\+Target}
+\begin{DoxyCompactList}\small\item\em Attach to camera to smoothly track player. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_game_over}{Game\+Over}
+\begin{DoxyCompactList}\small\item\em Handles game over state. On game over\+: enables game over ui and saves high score. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_head}{Head}
+\begin{DoxyCompactList}\small\item\em Handles death of player when \hyperlink{class_infinite_jumper_1_1_darkness}{Infinite\+Jumper.\+Darkness} enters trigger. Invokes Infinite\+Jumper.\+Level\+Chunks.\+On\+Death. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_high_score}{High\+Score}
+\begin{DoxyCompactList}\small\item\em Updates highscore U\+I on main menu. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_level_builder}{Level\+Builder}
+\begin{DoxyCompactList}\small\item\em Handles constructing (instantiating) the level chuncks. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_level_chuck_pre_build}{Level\+Chuck\+Pre\+Build}
+\begin{DoxyCompactList}\small\item\em A level chuck that is static and built at start. Used to construct the empty level chuck underneath player at game start. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_level_chunk}{Level\+Chunk}
+\begin{DoxyCompactList}\small\item\em Level chunk. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_level_chunk_manager}{Level\+Chunk\+Manager}
+\begin{DoxyCompactList}\small\item\em Builds new Infinite\+Jumper.\+Level\+Chunks when required. Stores current position and builds new chunks at current y position. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_level_loader}{Level\+Loader}
+\begin{DoxyCompactList}\small\item\em Responsible from loading the level data from file. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_main_menu}{Main\+Menu}
+\begin{DoxyCompactList}\small\item\em Plays background audio clip if present. Loads game scene if any key is pressed. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_platform}{Platform}
+\begin{DoxyCompactList}\small\item\em Attach to the platform tile prefab. Handles destruction when \hyperlink{class_infinite_jumper_1_1_darkness}{Infinite\+Jumper.\+Darkness} enters trigger. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_player}{Player}
+\begin{DoxyCompactList}\small\item\em The main player movement script, also updates current score based on the players y position. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_score}{Score}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_infinite_jumper_1_1_score}{Score} U\+I component for main game scene. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_score_data}{Score\+Data}
+\begin{DoxyCompactList}\small\item\em Class to store serializable score data. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_shadow}{Shadow}
+\begin{DoxyCompactList}\small\item\em Attach to the shadow tile. Destroys this gameobject if its associated platform tile is destroyed. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_tile_prefab}{Tile\+Prefab}
+\begin{DoxyCompactList}\small\item\em Used to map a Game\+Object to its character representation in file. All prefabs should be of the same size. \end{DoxyCompactList}\item 
+class \hyperlink{class_infinite_jumper_1_1_u_i_flash}{U\+I\+Flash}
+\begin{DoxyCompactList}\small\item\em User interface flash. Acts as an overlay for the main menu and gameplay scene. \end{DoxyCompactList}\end{DoxyCompactItemize}

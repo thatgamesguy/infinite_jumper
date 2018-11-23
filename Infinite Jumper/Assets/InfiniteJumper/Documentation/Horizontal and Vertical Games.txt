@@ -1,0 +1,15 @@
+This asset contains two separate games: a horizontal and vertical jumper. 
+Each games data is independent from the other games so it easy to remove one game from your project or to test both in the same project.
+
+To test each game:
+
+- Add the the scenes to the build settings, located in InfiniteJumper/Horizontal/Scenes and InfiniteJumper/Vertical/Scenes.
+- Run the MainMenu scene for the game you would like to test.
+
+To remove a specific game from your project:
+
+- Delete games folder i.e. InfiniteJumper/Horizontal or InfiniteJumper/Vertical
+- Delete the corresponding games level data i.e. InfiniteJumper/Resources/Horizontal_Levels or InfiniteJumper/Resources/Vertical_Levels
+- Add remaining game specific scenes to build settings i.e. InfiniteJumper/Horizontal/Scenes or InfiniteJumper/Vertical/Scenes
+
+Finally run the Main Menu scene for the corresponding game (located in the Scenes folder).

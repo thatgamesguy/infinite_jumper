@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3decb46417be14fc2bb265d3cf3b9c92
+labels:
+- 2d
+- Player
+- Controller
+timeCreated: 1442517661
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

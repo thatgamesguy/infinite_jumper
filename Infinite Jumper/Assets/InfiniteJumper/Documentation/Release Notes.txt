@@ -1,0 +1,11 @@
+v1.0.
+
+-Initial Release
+
+
+v2.0.
+
+-Added Horizontal Jumper
+-Updated Darkness movement to use LateUpdate and transform.Translate (rather than updating position directly) to resolve erratic movement
+-Added type check when loading data to prevent errors from loading vertical game data while playing horizontal game and vise versa.
+-Changed player collider from box collider to edge collider to resolve occasional issue where player get stuck moving along platform.

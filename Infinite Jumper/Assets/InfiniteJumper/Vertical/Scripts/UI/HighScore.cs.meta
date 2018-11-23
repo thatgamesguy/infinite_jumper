@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ee38765e129664031b95eed9759e7322
+labels:
+- Ui
+- Gui
+- Highscore
+timeCreated: 1442569739
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,224 @@
+\hypertarget{class_infinite_jumper_1_1_player}{}\section{Infinite\+Jumper.\+Player Class Reference}
+\label{class_infinite_jumper_1_1_player}\index{Infinite\+Jumper.\+Player@{Infinite\+Jumper.\+Player}}
+
+
+The main player movement script, also updates current score based on the players y position.  
+
+
+Inheritance diagram for Infinite\+Jumper.\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_infinite_jumper_1_1_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_infinite_jumper_1_1_player_a0b62c5aa1e4ec4e3852aeafbd9e5c906}{Move\+Left} ()
+\begin{DoxyCompactList}\small\item\em Move character left in next call to Fixed\+Update. Called on button down. \end{DoxyCompactList}\item 
+void \hyperlink{class_infinite_jumper_1_1_player_a5b17789e955258368c6a5eee679cc440}{Stop\+Moving\+Left} ()
+\begin{DoxyCompactList}\small\item\em Stop moving the character left. Called on button up. \end{DoxyCompactList}\item 
+void \hyperlink{class_infinite_jumper_1_1_player_a55fa450b924a8fafe80034c668268ea6}{Move\+Right} ()
+\begin{DoxyCompactList}\small\item\em Move character right in next call to Fixed\+Update. Called on button down. \end{DoxyCompactList}\item 
+void \hyperlink{class_infinite_jumper_1_1_player_ad0547385c065e92ce6bcf0301949471d}{Stop\+Moving\+Right} ()
+\begin{DoxyCompactList}\small\item\em Stop moving the character left. Called on button up. \end{DoxyCompactList}\item 
+void \hyperlink{class_infinite_jumper_1_1_player_acbba53c1279ea421f60fd862fbdd7333}{Jump} ()
+\begin{DoxyCompactList}\small\item\em Makes the character jump (if on ground) or double jump (if already in the air and has not already double jumped). \end{DoxyCompactList}\item 
+void \hyperlink{class_infinite_jumper_1_1_player_aae3331c165f08acbe739e125c36d2824}{On\+Death} ()
+\begin{DoxyCompactList}\small\item\em Called on death event. Plays \hyperlink{class_infinite_jumper_1_1_player_a51f7e100113eb83a93e5d05f3e1ac5b2}{Infinite\+Jumper.\+Player.\+audio\+On\+Death}, disables player sprite and enables on death particles. Destroys object after a set amount of time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_infinite_jumper_1_1_player_a77e2cc98878effd33f249f0e58d30d23}{max\+Speed} = 10f
+\begin{DoxyCompactList}\small\item\em Maximum left/right movement speed. \end{DoxyCompactList}\item 
+float \hyperlink{class_infinite_jumper_1_1_player_a0b83d3c7a02d866e230110ba3c1ac0da}{jump\+Force} = 700f
+\begin{DoxyCompactList}\small\item\em The force applied when the player jumps. \end{DoxyCompactList}\item 
+Transform \hyperlink{class_infinite_jumper_1_1_player_adaea323de33b7c4094ba8a23fa534f5d}{ground\+Check}
+\begin{DoxyCompactList}\small\item\em The location to perform a check to see if the player is touching the ground. \end{DoxyCompactList}\item 
+Layer\+Mask \hyperlink{class_infinite_jumper_1_1_player_a914142cd34011ec8ac1a5482d56d2548}{ground\+Mask}
+\begin{DoxyCompactList}\small\item\em The layer mask for tiles that the player can stand on. \end{DoxyCompactList}\item 
+Audio\+Clip\mbox{[}$\,$\mbox{]} \hyperlink{class_infinite_jumper_1_1_player_a531c3b41299bee812c3c1eb918749d1a}{jump\+Clips}
+\begin{DoxyCompactList}\small\item\em Audio clips to play when the player jumps. \end{DoxyCompactList}\item 
+Audio\+Clip\mbox{[}$\,$\mbox{]} \hyperlink{class_infinite_jumper_1_1_player_ae09844508009d9007bc7c72572ba99a9}{walk\+Clips}
+\begin{DoxyCompactList}\small\item\em Clips to play as the player walks on the ground. \end{DoxyCompactList}\item 
+Audio\+Clip\mbox{[}$\,$\mbox{]} \hyperlink{class_infinite_jumper_1_1_player_a51f7e100113eb83a93e5d05f3e1ac5b2}{audio\+On\+Death}
+\begin{DoxyCompactList}\small\item\em Audio clip to play on death. \end{DoxyCompactList}\item 
+Vector3 \hyperlink{class_infinite_jumper_1_1_player_a03193a80fd21092d462ae40241eb77a5}{ground\+Scale}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_infinite_jumper_1_1_player}{Player} scale when on groud. \end{DoxyCompactList}\item 
+\hypertarget{class_infinite_jumper_1_1_player_a779300d7b0c923bbe0d99d5312b844a9}{}Vector3 {\bfseries jumping\+Scale}\label{class_infinite_jumper_1_1_player_a779300d7b0c923bbe0d99d5312b844a9}
+
+\item 
+Game\+Object \hyperlink{class_infinite_jumper_1_1_player_a7ceadd6a21d80a5ba1a346436a932e26}{explosion\+Particle\+Container}
+\begin{DoxyCompactList}\small\item\em The explosion particle container. The gameobject the holds the particle system used when the player dies and explods. \end{DoxyCompactList}\item 
+Particle\+System \hyperlink{class_infinite_jumper_1_1_player_a6377b4864639982c835b912f3dbe0552}{land\+Particle}
+\begin{DoxyCompactList}\small\item\em The land particle. Any particle system for when the player lands on the ground after a jump. \end{DoxyCompactList}\item 
+\hyperlink{class_infinite_jumper_1_1_score}{Score} \hyperlink{class_infinite_jumper_1_1_player_a908c55d32a3176d7d2a9ebd85212dc83}{score}
+\begin{DoxyCompactList}\small\item\em Used to update the current score and the corresponding text. \end{DoxyCompactList}\item 
+Game\+Object \hyperlink{class_infinite_jumper_1_1_player_a252f068cd18db2fc2872aecd78cea356}{player\+Sprite\+Container}
+\begin{DoxyCompactList}\small\item\em The gameobject that holds the players sprite. This is disabled when the player dies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main player movement script, also updates current score based on the players y position. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_infinite_jumper_1_1_player_acbba53c1279ea421f60fd862fbdd7333}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!Jump@{Jump}}
+\index{Jump@{Jump}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{Jump()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+Jump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_acbba53c1279ea421f60fd862fbdd7333}
+
+
+Makes the character jump (if on ground) or double jump (if already in the air and has not already double jumped). 
+
+\hypertarget{class_infinite_jumper_1_1_player_a0b62c5aa1e4ec4e3852aeafbd9e5c906}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!Move\+Left@{Move\+Left}}
+\index{Move\+Left@{Move\+Left}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{Move\+Left()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+Move\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_a0b62c5aa1e4ec4e3852aeafbd9e5c906}
+
+
+Move character left in next call to Fixed\+Update. Called on button down. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a55fa450b924a8fafe80034c668268ea6}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!Move\+Right@{Move\+Right}}
+\index{Move\+Right@{Move\+Right}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{Move\+Right()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+Move\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_a55fa450b924a8fafe80034c668268ea6}
+
+
+Move character right in next call to Fixed\+Update. Called on button down. 
+
+\hypertarget{class_infinite_jumper_1_1_player_aae3331c165f08acbe739e125c36d2824}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!On\+Death@{On\+Death}}
+\index{On\+Death@{On\+Death}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{On\+Death()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+On\+Death (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_aae3331c165f08acbe739e125c36d2824}
+
+
+Called on death event. Plays \hyperlink{class_infinite_jumper_1_1_player_a51f7e100113eb83a93e5d05f3e1ac5b2}{Infinite\+Jumper.\+Player.\+audio\+On\+Death}, disables player sprite and enables on death particles. Destroys object after a set amount of time. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a5b17789e955258368c6a5eee679cc440}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!Stop\+Moving\+Left@{Stop\+Moving\+Left}}
+\index{Stop\+Moving\+Left@{Stop\+Moving\+Left}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{Stop\+Moving\+Left()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+Stop\+Moving\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_a5b17789e955258368c6a5eee679cc440}
+
+
+Stop moving the character left. Called on button up. 
+
+\hypertarget{class_infinite_jumper_1_1_player_ad0547385c065e92ce6bcf0301949471d}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!Stop\+Moving\+Right@{Stop\+Moving\+Right}}
+\index{Stop\+Moving\+Right@{Stop\+Moving\+Right}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{Stop\+Moving\+Right()}]{\setlength{\rightskip}{0pt plus 5cm}void Infinite\+Jumper.\+Player.\+Stop\+Moving\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_infinite_jumper_1_1_player_ad0547385c065e92ce6bcf0301949471d}
+
+
+Stop moving the character left. Called on button up. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_infinite_jumper_1_1_player_a51f7e100113eb83a93e5d05f3e1ac5b2}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!audio\+On\+Death@{audio\+On\+Death}}
+\index{audio\+On\+Death@{audio\+On\+Death}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{audio\+On\+Death}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip \mbox{[}$\,$\mbox{]} Infinite\+Jumper.\+Player.\+audio\+On\+Death}\label{class_infinite_jumper_1_1_player_a51f7e100113eb83a93e5d05f3e1ac5b2}
+
+
+Audio clip to play on death. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a7ceadd6a21d80a5ba1a346436a932e26}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!explosion\+Particle\+Container@{explosion\+Particle\+Container}}
+\index{explosion\+Particle\+Container@{explosion\+Particle\+Container}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{explosion\+Particle\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Infinite\+Jumper.\+Player.\+explosion\+Particle\+Container}\label{class_infinite_jumper_1_1_player_a7ceadd6a21d80a5ba1a346436a932e26}
+
+
+The explosion particle container. The gameobject the holds the particle system used when the player dies and explods. 
+
+\hypertarget{class_infinite_jumper_1_1_player_adaea323de33b7c4094ba8a23fa534f5d}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!ground\+Check@{ground\+Check}}
+\index{ground\+Check@{ground\+Check}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{ground\+Check}]{\setlength{\rightskip}{0pt plus 5cm}Transform Infinite\+Jumper.\+Player.\+ground\+Check}\label{class_infinite_jumper_1_1_player_adaea323de33b7c4094ba8a23fa534f5d}
+
+
+The location to perform a check to see if the player is touching the ground. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a914142cd34011ec8ac1a5482d56d2548}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!ground\+Mask@{ground\+Mask}}
+\index{ground\+Mask@{ground\+Mask}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{ground\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Mask Infinite\+Jumper.\+Player.\+ground\+Mask}\label{class_infinite_jumper_1_1_player_a914142cd34011ec8ac1a5482d56d2548}
+
+
+The layer mask for tiles that the player can stand on. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a03193a80fd21092d462ae40241eb77a5}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!ground\+Scale@{ground\+Scale}}
+\index{ground\+Scale@{ground\+Scale}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{ground\+Scale}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Infinite\+Jumper.\+Player.\+ground\+Scale}\label{class_infinite_jumper_1_1_player_a03193a80fd21092d462ae40241eb77a5}
+
+
+\hyperlink{class_infinite_jumper_1_1_player}{Player} scale when on groud. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a531c3b41299bee812c3c1eb918749d1a}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!jump\+Clips@{jump\+Clips}}
+\index{jump\+Clips@{jump\+Clips}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{jump\+Clips}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip \mbox{[}$\,$\mbox{]} Infinite\+Jumper.\+Player.\+jump\+Clips}\label{class_infinite_jumper_1_1_player_a531c3b41299bee812c3c1eb918749d1a}
+
+
+Audio clips to play when the player jumps. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a0b83d3c7a02d866e230110ba3c1ac0da}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!jump\+Force@{jump\+Force}}
+\index{jump\+Force@{jump\+Force}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{jump\+Force}]{\setlength{\rightskip}{0pt plus 5cm}float Infinite\+Jumper.\+Player.\+jump\+Force = 700f}\label{class_infinite_jumper_1_1_player_a0b83d3c7a02d866e230110ba3c1ac0da}
+
+
+The force applied when the player jumps. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a6377b4864639982c835b912f3dbe0552}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!land\+Particle@{land\+Particle}}
+\index{land\+Particle@{land\+Particle}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{land\+Particle}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+System Infinite\+Jumper.\+Player.\+land\+Particle}\label{class_infinite_jumper_1_1_player_a6377b4864639982c835b912f3dbe0552}
+
+
+The land particle. Any particle system for when the player lands on the ground after a jump. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a77e2cc98878effd33f249f0e58d30d23}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!max\+Speed@{max\+Speed}}
+\index{max\+Speed@{max\+Speed}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{max\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Infinite\+Jumper.\+Player.\+max\+Speed = 10f}\label{class_infinite_jumper_1_1_player_a77e2cc98878effd33f249f0e58d30d23}
+
+
+Maximum left/right movement speed. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a252f068cd18db2fc2872aecd78cea356}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!player\+Sprite\+Container@{player\+Sprite\+Container}}
+\index{player\+Sprite\+Container@{player\+Sprite\+Container}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{player\+Sprite\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Infinite\+Jumper.\+Player.\+player\+Sprite\+Container}\label{class_infinite_jumper_1_1_player_a252f068cd18db2fc2872aecd78cea356}
+
+
+The gameobject that holds the players sprite. This is disabled when the player dies. 
+
+\hypertarget{class_infinite_jumper_1_1_player_a908c55d32a3176d7d2a9ebd85212dc83}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!score@{score}}
+\index{score@{score}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{score}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Score} Infinite\+Jumper.\+Player.\+score}\label{class_infinite_jumper_1_1_player_a908c55d32a3176d7d2a9ebd85212dc83}
+
+
+Used to update the current score and the corresponding text. 
+
+\hypertarget{class_infinite_jumper_1_1_player_ae09844508009d9007bc7c72572ba99a9}{}\index{Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}!walk\+Clips@{walk\+Clips}}
+\index{walk\+Clips@{walk\+Clips}!Infinite\+Jumper\+::\+Player@{Infinite\+Jumper\+::\+Player}}
+\subsubsection[{walk\+Clips}]{\setlength{\rightskip}{0pt plus 5cm}Audio\+Clip \mbox{[}$\,$\mbox{]} Infinite\+Jumper.\+Player.\+walk\+Clips}\label{class_infinite_jumper_1_1_player_ae09844508009d9007bc7c72572ba99a9}
+
+
+Clips to play as the player walks on the ground. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/robert/\+Dropbox/\+Work/\+Unity/\+Infinite Jumper/\+Assets/\+Infinite\+Jumper/\+Scripts/\+Player/Player.\+cs\end{DoxyCompactItemize}
